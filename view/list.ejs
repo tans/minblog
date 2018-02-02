@@ -1,0 +1,25 @@
+<style type="text/css">
+  .articleList{list-style: none; padding: 0 }
+  .articleList li{padding-top: 10px; }
+  .articleList .hide{text-decoration: line-through;}
+
+</style>
+<div style="position:fixed;top:10px; right:10px;">
+  <%if(logined){%>
+    <a href="edit/new">发表</a>
+  <%}else{%>
+    <a href="login">登陆</a>
+  <%}%>
+</div>
+
+<ul  class="articleList">
+  <% for (var i = 0; i < posts.length; i++) {
+    var postid = posts.length-i-1;
+  %>
+    <%if(posts[postid].show || logined){%>
+      <li class="<%=posts[postid].show?'':'hide'%>" >
+        <a href="posts/<%=postid%>"><%=posts[postid].title%></a>
+      </li>
+    <%}%>
+  <% } %>
+</ul>

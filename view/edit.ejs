@@ -1,0 +1,21 @@
+<form method="post" action="../posts/<%=postid%>" >
+  <div>
+    <div>标题</div>
+    <input style="width: 320px;" type="" name="title" value="<%=post.title%>">
+  </div>
+  <br/>
+  <div>
+    <div>内容</div>
+    <textarea name="content" style="width: 480px;" rows="30"><%=post.content%></textarea>
+  </div>
+  <div>
+    <div>可见</div>
+    <select name="show">
+      <option value=true <%=post.show?'selected':''%> >显示</option>
+      <option value=false <%=!post.show?'selected':''%>>隐藏</option>
+    </select>
+  </div>
+  <br/>
+  <br/>
+  <button>确定</button>
+</form>
