@@ -1,8 +1,8 @@
 # minblog
-blog system less than 100 lines
+minblog是一个不足200行代码的博客系统
 
-功能实现
- - 文章列表
- - 文章查看
- - 管理员登陆
- - 增改藏文章
+项目地址 [https://github.com/tans/minblog](https://github.com/tans/minblog)
+
+示例地址 : [http://blog.minapp.xin](http://blog.minapp.xin)
+
+支持管理员登陆, markdown编辑文章
