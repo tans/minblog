@@ -12,7 +12,7 @@ Render(app, {
   viewExt: "ejs"
 });
 
-let token = "minist";
+let token = "minblog";
 
 // 读取文章数据
 let posts = [];
@@ -49,6 +49,7 @@ router.get("/edit/:postid", async ctx => {
 router.get("/posts/:postid", async ctx => {
   ctx.state.post = posts[ctx.params.postid];
   ctx.state.postid = ctx.params.postid;
+  ctx.state.html = marked(ctx.state.post.content);
   await ctx.render("detail");
 });
 
@@ -66,7 +67,7 @@ router.post("/posts/:postid", async ctx => {
   }
 
   fs.writeFileSync("./posts.json", JSON.stringify(posts, null, 2));
-  ctx.redirect("/");
+  ctx.redirect("/posts/" + ctx.params.postid);
 });
 
 app.use(async (ctx, next) => {
