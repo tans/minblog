@@ -1,7 +1,8 @@
 [
   {
     "title": "欢迎使用minblog",
-    "content": "minblog是一个不超200行代码的博客系统. 欢迎阅读修改!\r\n\r\n\r\n### 功能列表\r\n\r\n- markdown语法编辑\r\n- 管理员登陆\r\n- 隐藏文章\r\n\r\n\r\n项目地址 : [https://github.com/tans/minblog](https://github.com/tans/minblog)",
+    "content":
+      "minblog是一个不超200行代码的博客系统. 欢迎阅读修改!\r\n\r\n\r\n### 功能列表\r\n\r\n- markdown语法编辑\r\n- 管理员登陆\r\n- 隐藏文章\r\n\r\n\r\n项目地址 : [https://github.com/tans/minblog](https://github.com/tans/minblog)",
     "show": "true"
   }
 ]

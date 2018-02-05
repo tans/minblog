@@ -51,6 +51,7 @@ router.post("/posts/:postid", async ctx => {
   }
   if (ctx.params.postid == "new") {
     posts.push(ctx.request.body);
+    ctx.params.postid = posts.length - 1;
   } else {
     posts[ctx.params.postid] = ctx.request.body;
   }
